@@ -21,7 +21,7 @@ async function lock2yarn(pkgPath) {
   }
   const pkg = require(realPkgPath);
   logger.info('migrate start...');
-  await migrate(pkg);
+  await migrate(pkg, root);
   await restore(pkgPath, JSON.stringify(pkg, null, 2));
   await pkgSyncLock(path.join(root, './yarn.lock'), pkg);
   logger.success('migrate npm lock to yarn lock for all package success!!! 🎉🎉🎉');
