@@ -1,6 +1,6 @@
 {
   "name": "lock2yarn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a common plugin for migrate npm lock to yarn package lock",
   "main": "index.js",
   "engines": {
