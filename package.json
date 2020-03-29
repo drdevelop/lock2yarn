@@ -1,0 +1,47 @@
+{
+  "name": "lock2yarn",
+  "version": "1.0.0",
+  "description": "a common plugin for migrate npm lock to yarn package lock",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "bin": {
+    "lock2yarn": "bin/start"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drdevelop/lock2yarn.git"
+  },
+  "keywords": [
+    "npm",
+    "lock",
+    "yarn"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drdevelop/lock2yarn/issues"
+  },
+  "homepage": "https://github.com/drdevelop/lock2yarn#readme",
+  "devDependencies": {
+    "@yarnpkg/lockfile": "^1.1.0",
+    "commander": "^5.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
